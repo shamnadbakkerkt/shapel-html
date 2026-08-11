@@ -1,0 +1,6 @@
+.git
+.github
+k8s/
+Jenkinsfile
+README.md
+sonar-project.properties
