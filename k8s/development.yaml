@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: static-website
-        image: shamnaddockerhub/static-website:13
+        image: shamnaddockerhub/shapel-static-website:4
         ports:
         - containerPort: 80
         resources:
