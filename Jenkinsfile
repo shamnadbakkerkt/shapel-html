@@ -55,9 +55,9 @@ pipeline {
                     git config user.email "shamnadkt@gmail.com"
                     git config user.name "${GIT_USER_NAME}"
                     
-                    sed -i "s|image: .*|image: shamnaddockerhub/static-website:${BUILD_NUMBER}|g" k8s/development.yml
+                    sed -i "s|image: .*|image: shamnaddockerhub/static-website:${BUILD_NUMBER}|g" k8s/development.yaml
                     
-                    git add k8s/development.yml
+                    git add k8s/development.yaml
                     git commit -m "Update static site image tag to ${BUILD_NUMBER} [skip ci]" || echo "No changes to commit"
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
                 '''
